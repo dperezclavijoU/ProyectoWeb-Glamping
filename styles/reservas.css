@@ -1,0 +1,41 @@
+body {
+  background: #f5fff7; /* Verde claro */
+}
+
+header {
+  background: #2e8b57; /* Verde oscuro */
+  color: #ffffff;
+}
+
+nav {
+  background: #3b7d4f;
+}
+
+nav a {
+  color: #ffffff;
+}
+
+nav a:hover {
+  color: #a8e6a1;
+}
+
+h2 {
+  color: #228b22;
+}
+
+table {
+  background: #e8f5e9;
+}
+
+table th, table td {
+  border: 1px solid #228b22;
+}
+
+form button {
+  background: #2e8b57;
+  color: #ffffff;
+}
+
+form button:hover {
+  background: #228b22;
+}

@@ -1,0 +1,41 @@
+body {
+  background: #ffffff;
+}
+
+header {
+  background: #f5f5dc;
+  color: #3a3426;
+}
+
+nav {
+  background: #1f2937;
+}
+
+nav a {
+  color: #ffffff;
+}
+
+nav a:hover {
+  color: #66ccff;
+}
+
+h2 {
+  color: #0066cc;
+}
+
+table {
+  background: #e6f3ff;
+}
+
+table th, table td {
+  border: 1px solid #0066cc;
+}
+
+form button {
+  background: #004080;
+  color: #ffffff;
+}
+
+form button:hover {
+  background: #0066cc;
+}

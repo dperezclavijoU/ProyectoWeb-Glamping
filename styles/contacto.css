@@ -1,0 +1,41 @@
+body {
+  background: #fff8f0; /* Naranja clarito */
+}
+
+header {
+  background: #cc6600;
+  color: #ffffff;
+}
+
+nav {
+  background: #663300;
+}
+
+nav a {
+  color: #ffffff;
+}
+
+nav a:hover {
+  color: #ffcc99;
+}
+
+h2 {
+  color: #ff6600;
+}
+
+table {
+  background: #fff0e6;
+}
+
+table th, table td {
+  border: 1px solid #ff6600;
+}
+
+form button {
+  background: #cc6600;
+  color: #ffffff;
+}
+
+form button:hover {
+  background: #ff6600;
+}
