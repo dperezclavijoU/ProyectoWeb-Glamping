@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservas - Glamping Cielo Estelar</title>
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="../styles/reservas.css">
+</head>
+<body>
+  <!-- Encabezado, Logo, nombre de la página para ubicar el usuario -->
+  <header>
+    <div class="logo-nombre">
+      <img src="../img/Logo.png" alt="Logo Glamping">
+      <div>
+        <h1>Glamping Cielo Estelar</h1>
+        <p>Vive la magia de la naturaleza con el confort que mereces</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menú de navegación de la página -->
+  <nav>
+    <a href="../index.html">Inicio</a>
+    <a href="alojamientos.html">Alojamientos</a>
+    <a href="reservas.html">Reservas</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <!-- Contenido principal -->
+  <main>
+    <section> <!-- Sección: Formulario de Reserva -->
+      <h2>Formulario de Reserva</h2>
+      <form id="formReserva">
+        <label for="nombre">Nombre completo:</label><br>
+        <input type="text" id="nombre" name="nombre"><br><br>
+
+        <label for="email">Correo electrónico:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="fechaEntrada">Fecha de entrada:</label><br>
+        <input type="date" id="fechaEntrada" name="fechaEntrada"><br><br>
+
+        <label for="fechaSalida">Fecha de salida:</label><br>
+        <input type="date" id="fechaSalida" name="fechaSalida"><br><br>
+
+        <label for="personas">Número de personas:</label><br>
+        <input type="number" id="personas" name="personas" min="1"><br><br>
+
+        <label for="alojamiento">Tipo de alojamiento:</label><br>
+        <select id="alojamiento" name="alojamiento">
+          <option value="">-- Seleccione una opción --</option>
+          <option value="standard">Cabaña Standard</option>
+          <option value="premium">Cabaña Premium</option>
+          <option value="suite">Suite Estelar</option>
+        </select><br><br>
+
+        <button type="submit">Reservar</button>
+
+        <p id="errores" class="error"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 Glamping Cielo Estelar | Naturaleza y confort en un solo lugar</p>
+    <div class="redes">
+      <a href="https://facebook.com" target="_blank">
+        <img src="../img/redes_sociales/facebook.png" alt="Facebook">
+      </a>
+      <a href="https://instagram.com" target="_blank">
+        <img src="../img/redes_sociales/instagram.png" alt="Instagram">
+      </a>
+      <a href="https://tiktok.com" target="_blank">
+        <img src="../img/redes_sociales/tiktok.png" alt="TikTok">
+      </a>
+      <a href="https://youtube.com" target="_blank">
+        <img src="../img/redes_sociales/youtube.png" alt="YouTube">
+      </a>
+      <a href="https://whatsapp.com" target="_blank">
+        <img src="../img/redes_sociales/whatsapp.png" alt="WhatsApp">
+      </a>
+    </div>
+  </footer>
+
+  <!-- Script de validación -->
+  <script>
+    const form = document.getElementById("formReserva");
+    const errores = document.getElementById("errores");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+      errores.textContent = "";
+
+      const nombre = document.getElementById("nombre").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const fechaEntrada = document.getElementById("fechaEntrada").value;
+      const fechaSalida = document.getElementById("fechaSalida").value;
+      const personas = document.getElementById("personas").value;
+      const alojamiento = document.getElementById("alojamiento").value;
+
+      if (!nombre || !email || !fechaEntrada || !fechaSalida || !personas || !alojamiento) {
+        errores.textContent = "Por favor complete todos los campos.";
+        return;
+      }
+
+      alert("¡Reserva enviada con éxito! Nos pondremos en contacto contigo pronto.");
+      form.reset();
+    });
+  </script>
+</body>
+</html>

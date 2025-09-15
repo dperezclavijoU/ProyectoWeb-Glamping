@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Glamping Cielo Estelar</title>
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="../styles/contacto.css">
+</head>
+<body>
+  <!-- Encabezado, Logo, nombre de la página para ubicar el usuario -->
+  <header>
+    <div class="logo-nombre">
+      <img src="../img/Logo.png" alt="Logo Glamping">
+      <div>
+        <h1>Glamping Cielo Estelar</h1>
+        <p>Vive la magia de la naturaleza con el confort que mereces</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menú de navegación de la página -->
+  <nav>
+    <a href="../index.html">Inicio</a>
+    <a href="alojamientos.html">Alojamientos</a>
+    <a href="reservas.html">Reservas</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <!-- Contenido principal -->
+  <main>
+    <section> <!-- Sección: Información de contacto -->
+      <h2>Información de contacto</h2>
+      <p><strong>Dirección:</strong> Vereda Las Estrellas, Bosques del Norte</p>
+      <p><strong>Teléfono/WhatsApp:</strong> +57 310 555 1234</p>
+      <p><strong>Email:</strong> reservas@cieloestelar.com</p>
+    </section>
+
+    <section> <!-- Sección: Ubicación google maps -->
+      <h2>Ubicación</h2>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.6780880816174!2d-74.072092!3d4.710989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9aa5e9d3c4ad%3A0x8d9b8e2e7f0a13c1!2sBogotá%2C%20Colombia!5e0!3m2!1ses!2sco!4v1694123456789"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </section>
+
+    <section> <!-- Sección: Formulario de contactanos -->
+      <h2>Escríbenos</h2>
+      <form id="formContacto">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre"><br><br>
+
+        <label for="email">Correo electrónico:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="mensaje">Mensaje:</label><br>
+        <textarea id="mensaje" name="mensaje" rows="4"></textarea><br><br>
+
+        <button type="submit">Enviar mensaje</button>
+
+        <p id="errorContacto" class="error"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 Glamping Cielo Estelar | Naturaleza y confort en un solo lugar</p>
+    <div class="redes">
+      <a href="https://facebook.com" target="_blank">
+        <img src="../img/redes_sociales/facebook.png" alt="Facebook">
+      </a>
+      <a href="https://instagram.com" target="_blank">
+        <img src="../img/redes_sociales/instagram.png" alt="Instagram">
+      </a>
+      <a href="https://tiktok.com" target="_blank">
+        <img src="../img/redes_sociales/tiktok.png" alt="TikTok">
+      </a>
+      <a href="https://youtube.com" target="_blank">
+        <img src="../img/redes_sociales/youtube.png" alt="YouTube">
+      </a>
+      <a href="https://whatsapp.com" target="_blank">
+        <img src="../img/redes_sociales/whatsapp.png" alt="WhatsApp">
+      </a>
+    </div>
+  </footer>
+
+  <!-- Script de validación -->
+  <script>
+    const formC = document.getElementById("formContacto");
+    const errorC = document.getElementById("errorContacto");
+
+    formC.addEventListener("submit", function(event) {
+      event.preventDefault();
+      errorC.textContent = "";
+
+      const nombre = document.getElementById("nombre").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const mensaje = document.getElementById("mensaje").value.trim();
+
+      if (!nombre || !email || !mensaje) {
+        errorC.textContent = "Por favor complete todos los campos.";
+        return;
+      }
+
+      alert("¡Mensaje enviado! Gracias por contactarnos.");
+      formC.reset();
+    });
+  </script>
+</body>
+</html>
